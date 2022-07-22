@@ -1,6 +1,8 @@
-type ExampleEntity @entity {
+type ListingEntity @entity {
   id: ID!
-  count: BigInt!
-  nftAddress: Bytes! # address
+  nftAddress: Bytes! # address, ! mark indicate required
   tokenId: BigInt! # uint256
+  price: BigInt! # uint256
+  seller: Bytes! # address
+  buyer: Bytes! # address
 }
