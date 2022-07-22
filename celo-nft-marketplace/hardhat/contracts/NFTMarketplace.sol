@@ -76,7 +76,7 @@ contract NFTMarketplace{
         emit ListingCreated(nftAddress, tokenId, price, msg.sender);
     }
 
-    function cancelListing(address nftAddress, uint256 tokenId, address seller) external isListed(nftAddress, tokenId) isNFTOwner(nftAddress, tokenId){
+    function cancelListing(address nftAddress, uint256 tokenId) external isListed(nftAddress, tokenId) isNFTOwner(nftAddress, tokenId){
         
         // Delete listing struct from the mapping
         // Freeing up storage gas
